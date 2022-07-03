@@ -1,7 +1,8 @@
 import Judge from './judge'
 import DMOJ from './dmoj'
-import { badgen } from 'badgen'
 import Codeforces from "./codeforces";
+import AtCoder from "./atcoder";
+import { badgen } from 'badgen'
 
 type JudgeDesc = {
     id: string
@@ -19,6 +20,11 @@ const JUDGES: JudgeDesc[] = [
         id: 'codeforces',
         label: 'Codeforces',
         judge: new Codeforces()
+    },
+    {
+        id: 'atcoder',
+        label: 'AtCoder',
+        judge: new AtCoder()
     }
 ]
 

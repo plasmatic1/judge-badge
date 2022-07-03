@@ -103,7 +103,7 @@ abstract class Judge {
         try {
             return this.generateBadge(await this.getRating(handle))
         } catch (e) {
-            return this.generateBadge(e)
+            return this.generateBadge(e.toString())
         }
     }
 
