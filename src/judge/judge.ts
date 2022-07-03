@@ -114,8 +114,7 @@ abstract class Judge {
      */
     generateBadgeSample(): string {
         return `<div>
-                    ${this.ratingMap.map(([bound, _]) =>
-                        `${this.generateBadge(bound)}`)}
+                    ${this.ratingMap.map(([bound, _]) => this.generateBadge(bound)).join('&nbsp;')}
                     ${this.generateBadge('Error')}
                 </div>`
     }

@@ -1,6 +1,7 @@
 import Judge from './judge'
 import DMOJ from './dmoj'
 import { badgen } from 'badgen'
+import Codeforces from "./codeforces";
 
 type JudgeDesc = {
     id: string
@@ -13,6 +14,11 @@ const JUDGES: JudgeDesc[] = [
         id: 'dmoj',
         label: 'DMOJ',
         judge: new DMOJ()
+    },
+    {
+        id: 'codeforces',
+        label: 'Codeforces',
+        judge: new Codeforces()
     }
 ]
 
@@ -27,7 +33,7 @@ function generateBadgeSample(): string {
                 })}
                 ${JUDGES.map(({label, judge}) =>
                     `<h2>${label}</h2>${judge.generateBadgeSample()}`       
-                ).join()}
+                ).join('')}
             </body>
             </html>`
 }

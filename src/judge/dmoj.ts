@@ -39,7 +39,7 @@ class DMOJ extends Judge {
             [1600, 'purple'],
             [1900, 'yellow'],
             [2400, 'red'],
-            [3000, '730b00']
+            [3000, '800000']
         ];
     }
 

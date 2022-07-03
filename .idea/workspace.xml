@@ -30,6 +30,7 @@
     "WebServerToolWindowFactoryState": "false",
     "javascript.nodejs.core.library.configured.version": "16.15.1",
     "javascript.nodejs.core.library.typings.version": "16.11.41",
+    "last_opened_file_path": "E:/repos/dmoj-badge-js/src/judge",
     "nodejs_interpreter_path": "node",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "preferences.sourceCode.JSON",
@@ -37,6 +38,11 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\repos\dmoj-badge-js\src\judge" />
+    </key>
+  </component>
   <component name="RunManager" selected="npm.watch">
     <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
@@ -73,7 +79,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1656305250605</updated>
-      <workItem from="1656305251798" duration="22780000" />
+      <workItem from="1656305251798" duration="25003000" />
     </task>
     <servers />
   </component>
