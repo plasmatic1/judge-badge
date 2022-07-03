@@ -9,6 +9,8 @@ This is quite overengineered, but hey that's just how things are sometimes.  Wan
 ## TODO
 
 * Add other judges
-  * Codeforces, Atcoder, Topcoder
+  * Topcoder
 * Bugtesting and unit tests :) (mostly just for fetch rating functions)
+* Find an empty background atcoder logo (maybe)
+* Roll out my own assets instead of using preexisting ones probably :)
 * Dockerize this!!!
