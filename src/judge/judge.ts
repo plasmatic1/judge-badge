@@ -1,4 +1,4 @@
-import { DEFAULT_COLOR } from "../constants";
+import { DEFAULT_COLOR } from "../constants"
 import { badgen } from 'badgen'
 
 abstract class Judge {
@@ -24,7 +24,7 @@ abstract class Judge {
     /**
      * Name of the judge
      */
-    protected abstract get judgeName(): string
+    abstract get judgeName(): string
 
     /**
      * Url to the icon of the judge

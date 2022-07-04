@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="befd1b24-8ee2-4d44-a9ba-019a4e48767f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/judge/atcoder.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/judge/topcoder.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/judge/allJudges.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/judge/allJudges.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/judge/atcoder.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/judge/atcoder.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/judge/codeforces.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/judge/codeforces.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/judge/dmoj.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/judge/dmoj.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/judge/judge.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/judge/judge.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -90,7 +92,7 @@
       <option name="presentableId" value="Default" />
       <updated>1656305250605</updated>
       <workItem from="1656305251798" duration="25003000" />
-      <workItem from="1656810264835" duration="3770000" />
+      <workItem from="1656810264835" duration="5977000" />
     </task>
     <servers />
   </component>

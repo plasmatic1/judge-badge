@@ -1,30 +1,31 @@
 import Judge from './judge'
 import DMOJ from './dmoj'
 import Codeforces from "./codeforces";
-import AtCoder from "./atcoder";
+import Atcoder from "./atcoder";
+import Topcoder from "./topcoder";
 import { badgen } from 'badgen'
 
 type JudgeDesc = {
     id: string
-    label: string
     judge: Judge
 }
 
 const JUDGES: JudgeDesc[] = [
     {
         id: 'dmoj',
-        label: 'DMOJ',
         judge: new DMOJ()
     },
     {
         id: 'codeforces',
-        label: 'Codeforces',
         judge: new Codeforces()
     },
     {
         id: 'atcoder',
-        label: 'AtCoder',
-        judge: new AtCoder()
+        judge: new Atcoder()
+    },
+    {
+        id: 'topcoder',
+        judge: new Topcoder()
     }
 ]
 
@@ -37,8 +38,8 @@ function generateBadgeSample(): string {
                     subject: 'ludicrously long',
                     status: 'placeholder badge'
                 })}
-                ${JUDGES.map(({label, judge}) =>
-                    `<h2>${label}</h2>${judge.generateBadgeSample()}`       
+                ${JUDGES.map(({judge}) =>
+                    `<h2>${judge.judgeName}</h2>${judge.generateBadgeSample()}`       
                 ).join('')}
             </body>
             </html>`

@@ -20,11 +20,11 @@ class DMOJ extends Judge {
     }
 
     protected get judgeIconUrl(): string {
-        return 'https://dmoj.ca/icon.svg';
+        return 'https://dmoj.ca/icon.svg'
     }
 
-    protected get judgeName(): string {
-        return 'DMOJ';
+    get judgeName(): string {
+        return 'DMOJ'
     }
 
     protected get maxRequestsPerPeriod(): number {
@@ -40,7 +40,7 @@ class DMOJ extends Judge {
             [1900, 'yellow'],
             [2400, 'red'],
             [3000, '800000']
-        ];
+        ]
     }
 
     protected get requestPeriod(): number {

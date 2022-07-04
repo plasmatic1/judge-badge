@@ -2,7 +2,7 @@ import Judge from './judge'
 import fetch from 'node-fetch'
 import * as cheerio from 'cheerio'
 
-class AtCoder extends Judge {
+class Atcoder extends Judge {
     protected async getRatingHelper(handle: string): Promise<number> {
         return new Promise<number>((resolve, reject) => {
             fetch(`https://atcoder.jp/users/${handle}`)
@@ -31,8 +31,8 @@ class AtCoder extends Judge {
         return 'https://img.atcoder.jp/assets/atcoder.png'
     }
 
-    protected get judgeName(): string {
-        return 'AtCoder'
+    get judgeName(): string {
+        return 'Atcoder'
     }
 
     protected get maxRequestsPerPeriod(): number {
@@ -56,4 +56,4 @@ class AtCoder extends Judge {
     }
 }
 
-export default AtCoder
+export default Atcoder
