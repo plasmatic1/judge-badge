@@ -2,14 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="befd1b24-8ee2-4d44-a9ba-019a4e48767f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/judge/topcoder.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dockerignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/judge/allJudges.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/judge/allJudges.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/judge/atcoder.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/judge/atcoder.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/judge/codeforces.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/judge/codeforces.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/judge/dmoj.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/judge/dmoj.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/judge/judge.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/judge/judge.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constants.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,27 +33,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;16.15.1&quot;,
-    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;16.11.41&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/repos/dmoj-badge-js/src/judge&quot;,
-    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.JSON&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;E:\\repos\\dmoj-badge-js\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "javascript.nodejs.core.library.configured.version": "16.15.1",
+    "javascript.nodejs.core.library.typings.version": "16.11.41",
+    "last_opened_file_path": "E:/repos/dmoj-badge-js",
+    "nodejs_interpreter_path": "node",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.sourceCode.JSON",
+    "ts.external.directory.path": "E:\\repos\\dmoj-badge-js\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\repos\dmoj-badge-js" />
       <recent name="E:\repos\dmoj-badge-js\src\judge" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.watch">
+  <component name="RunManager" selected="Docker.judgethigns">
+    <configuration name="judgethigns" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="containerName" value="" />
+          <option name="sourceFilePath" value="Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -78,6 +86,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.judgethigns" />
         <item itemvalue="npm.watch" />
         <item itemvalue="npm.build" />
       </list>
@@ -92,7 +101,7 @@
       <option name="presentableId" value="Default" />
       <updated>1656305250605</updated>
       <workItem from="1656305251798" duration="25003000" />
-      <workItem from="1656810264835" duration="5977000" />
+      <workItem from="1656810264835" duration="8817000" />
     </task>
     <servers />
   </component>
