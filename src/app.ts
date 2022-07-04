@@ -1,6 +1,6 @@
 import express from 'express'
 import { HOST, PORT } from './constants'
-import { JUDGES, generateBadgeSample } from "./judge/allJudges";
+import { JUDGES, generateBadgeSample } from "./judge/allJudges"
 const app = express()
 
 app.get('/', (req, res) => {

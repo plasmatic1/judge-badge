@@ -120,4 +120,4 @@ abstract class Judge {
     }
 }
 
-export default Judge;
+export default Judge

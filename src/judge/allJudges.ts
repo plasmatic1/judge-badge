@@ -1,8 +1,8 @@
 import Judge from './judge'
 import DMOJ from './dmoj'
-import Codeforces from "./codeforces";
-import Atcoder from "./atcoder";
-import Topcoder from "./topcoder";
+import Codeforces from "./codeforces"
+import Atcoder from "./atcoder"
+import Topcoder from "./topcoder"
 import { badgen } from 'badgen'
 
 type JudgeDesc = {

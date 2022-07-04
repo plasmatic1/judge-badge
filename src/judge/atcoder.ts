@@ -48,7 +48,7 @@ class Atcoder extends Judge {
             [2000, 'yellow'],
             [2400, 'ff8c00'],
             [2800, 'red'],
-        ];
+        ]
     }
 
     protected get requestPeriod(): number {

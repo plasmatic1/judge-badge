@@ -8,7 +8,7 @@ class DMOJ extends Judge {
                 .then(obj => obj.json())
                 .then(obj => {
                     if (obj.status === 'OK') {
-                        const result = obj.result;
+                        const result = obj.result
                         if (result.length === 0)
                             reject('Unrated')
                         else
@@ -50,7 +50,7 @@ class DMOJ extends Judge {
             [2400, 'red'],
             [2600, 'ca0000'],
             [3000, '800000']
-        ];
+        ]
     }
 
     protected get requestPeriod(): number {

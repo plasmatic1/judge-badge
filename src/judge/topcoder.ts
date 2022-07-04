@@ -41,7 +41,7 @@ class Topcoder extends Judge {
             [1500, 'yellow'],
             [2200, 'red'],
             [3000, '800000']
-        ];
+        ]
     }
 
     protected get requestPeriod(): number {
