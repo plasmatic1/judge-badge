@@ -3,6 +3,13 @@ import { HOST, PORT } from './constants'
 import { JUDGES, generateBadgeSample } from "./judge/allJudges"
 const app = express()
 
+// Logging middleware
+app.use((req, res, next) => {
+    console.log(`[${new Date(Date.now()).toISOString()}] GET ${req.url}`)
+    next()
+});
+
+// Endpoints
 app.get('/', (req, res) => {
     res.send(generateBadgeSample())
 })
@@ -17,6 +24,8 @@ for (const {id, judge} of JUDGES) {
     console.log(`Registered page for judge ${judge.judgeName} (path=/${id}/<rating>)`)
 }
 
+// Run server
 app.listen(PORT, HOST, () => {
-    return console.log(`Began server at ${HOST}:${PORT}`)
+    console.log(`Started server at ${HOST}:${PORT}`)
+    console.log()
 })
