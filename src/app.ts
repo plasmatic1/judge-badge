@@ -1,15 +1,17 @@
 import express from 'express'
-import { HOST, PORT } from './constants'
-import { JUDGES, generateBadgeSample } from "./judge/allJudges"
+import {HOST, PORT, STATIC_PATH} from './constants'
+import {JUDGES, generateBadgeSample} from "./judge/allJudges"
+import * as path from 'path'
+
 const app = express()
 
-// Logging middleware
+// logging middleware
 app.use((req, res, next) => {
     console.log(`[${new Date(Date.now()).toISOString()}] GET ${req.url}`)
     next()
 });
 
-// Endpoints
+// endpoints
 app.get('/', (req, res) => {
     res.send(generateBadgeSample())
 })
@@ -24,7 +26,10 @@ for (const {id, judge} of JUDGES) {
     console.log(`Registered page for judge ${judge.judgeName} (path=/${id}/<rating>)`)
 }
 
-// Run server
+// static files
+app.use(STATIC_PATH, express.static(path.join(__dirname, '..', 'static')))
+
+// run server
 app.listen(PORT, HOST, () => {
     console.log(`Started server at ${HOST}:${PORT}`)
     console.log()

@@ -1,4 +1,4 @@
-import { DEFAULT_COLOR } from "../constants"
+import { DEFAULT_COLOR, HOSTNAME, STATIC_PATH } from "../constants"
 import { badgen } from 'badgen'
 
 abstract class Judge {
@@ -90,7 +90,7 @@ abstract class Judge {
             label: this.judgeName,
             status: typeof (rating) === 'number' ? rating.toString() : rating,
             color: color,
-            icon: this.judgeIconUrl
+            icon: `http://${HOSTNAME}:$`, STATIC_PATH, this.judgeIconUrl)
         })
     }
 

@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="befd1b24-8ee2-4d44-a9ba-019a4e48767f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.dockerignore" beforeDir="false" afterPath="$PROJECT_DIR$/.dockerignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constants.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/judge/codeforces.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/judge/codeforces.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/judge/dmoj.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/judge/dmoj.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/judge/judge.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/judge/judge.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,6 +82,16 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="watch" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -92,8 +105,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="npm.watch" />
-        <item itemvalue="Docker.judgethigns" />
+        <item itemvalue="npm.start" />
         <item itemvalue="npm.build" />
+        <item itemvalue="Docker.judgethigns" />
       </list>
     </recent_temporary>
   </component>
@@ -108,6 +122,7 @@
       <workItem from="1656305251798" duration="25003000" />
       <workItem from="1656810264835" duration="9654000" />
       <workItem from="1657079383521" duration="4902000" />
+      <workItem from="1657248102757" duration="3924000" />
     </task>
     <servers />
   </component>

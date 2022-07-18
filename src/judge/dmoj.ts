@@ -20,7 +20,7 @@ class DMOJ extends Judge {
     }
 
     protected get judgeIconUrl(): string {
-        return 'https://dmoj.ca/icon.svg'
+        return 'dmoj.svg'
     }
 
     get judgeName(): string {

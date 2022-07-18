@@ -27,7 +27,7 @@ class DMOJ extends Judge {
     }
 
     protected get judgeIconUrl(): string {
-        return 'https://cdn.iconscout.com/icon/free/png-256/code-forces-3628695-3029920.png'
+        return 'codeforces.webp'
     }
 
     get judgeName(): string {
