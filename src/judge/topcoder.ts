@@ -22,7 +22,7 @@ class Topcoder extends Judge {
     }
 
     protected get judgeIconUrl(): string {
-        return 'https://www.topcoder.com/wp-content/uploads/2020/05/cropped-TC-Icon-32x32.png'
+        return 'topcoder.png'
     }
 
     get judgeName(): string {

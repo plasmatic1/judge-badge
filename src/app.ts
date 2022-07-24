@@ -1,7 +1,8 @@
 import express from 'express'
-import {HOST, PORT, STATIC_PATH} from './constants'
-import {JUDGES, generateBadgeSample} from "./judge/allJudges"
-import * as path from 'path'
+import {BASE_URL, HOST, PORT, PROD, STATIC_PATH} from './constants'
+import {JUDGES, generateBadgeSample} from './judge/allJudges'
+import path from 'path'
+import urlJoin from 'proper-url-join'
 
 const app = express()
 
@@ -15,6 +16,7 @@ app.use((req, res, next) => {
 app.get('/', (req, res) => {
     res.send(generateBadgeSample())
 })
+console.log(`PROD=${PROD}`)
 console.log('Registered sample page')
 
 for (const {id, judge} of JUDGES) {
@@ -23,7 +25,7 @@ for (const {id, judge} of JUDGES) {
         res.setHeader('Content-Type', 'image/svg+xml')
         res.send(await judge.generateBadgeWithHandle(handle))
     })
-    console.log(`Registered page for judge ${judge.judgeName} (path=/${id}/<rating>)`)
+    console.log(`Registered page for judge ${judge.judgeName} (path=${urlJoin(BASE_URL, id, '<handle>')})`)
 }
 
 // static files

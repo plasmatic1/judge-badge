@@ -1,5 +1,6 @@
-import { DEFAULT_COLOR, HOSTNAME, STATIC_PATH } from "../constants"
+import {BASE_URL, DEFAULT_COLOR, STATIC_PATH} from '../constants'
 import { badgen } from 'badgen'
+import urlJoin from 'proper-url-join'
 
 abstract class Judge {
     requestCount: number
@@ -90,7 +91,7 @@ abstract class Judge {
             label: this.judgeName,
             status: typeof (rating) === 'number' ? rating.toString() : rating,
             color: color,
-            icon: `http://${HOSTNAME}:$`, STATIC_PATH, this.judgeIconUrl)
+            icon: urlJoin(BASE_URL, STATIC_PATH, this.judgeIconUrl)
         })
     }
 

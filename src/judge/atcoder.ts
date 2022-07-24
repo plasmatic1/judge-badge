@@ -28,7 +28,7 @@ class Atcoder extends Judge {
     }
 
     protected get judgeIconUrl(): string {
-        return 'https://img.atcoder.jp/assets/atcoder.png'
+        return 'atcoder.png'
     }
 
     get judgeName(): string {
