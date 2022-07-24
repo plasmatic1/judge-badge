@@ -27,32 +27,22 @@ class Atcoder extends Judge {
         })
     }
 
-    protected get judgeIconUrl(): string {
-        return 'atcoder.png'
-    }
-
-    get judgeName(): string {
-        return 'Atcoder'
-    }
-
-    protected get maxRequestsPerPeriod(): number {
-        return 10
-    }
-
-    protected get ratingMap(): [number, string][] {
-        return [
-            [0, '572d00'],
-            [800, 'green'],
-            [1200, '04bab1'],
-            [1600, 'blue'],
-            [2000, 'yellow'],
-            [2400, 'ff8c00'],
-            [2800, 'red'],
-        ]
-    }
-
-    protected get requestPeriod(): number {
-        return 10000
+    constructor() {
+        super(
+            [
+                [0, '572d00'],
+                [800, 'green'],
+                [1200, '04bab1'],
+                [1600, 'blue'],
+                [2000, 'yellow'],
+                [2400, 'ff8c00'],
+                [2800, 'red'],
+            ],
+            'Atcoder',
+            'atcoder',
+            10,
+            10000
+        )
     }
 }
 
