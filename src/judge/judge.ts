@@ -1,6 +1,6 @@
 import {ASSETS_DIR_PATH, DEFAULT_COLOR} from '../constants'
 import { badgen } from 'badgen'
-import path from 'node:path/win32'
+import path from 'node:path'
 import * as fs from 'fs'
 import svgToMiniDataUri from 'mini-svg-data-uri'
 
@@ -47,7 +47,7 @@ abstract class Judge {
 
         // Conversion site: https://www.convertsimple.com/convert-webp-to-svg/
         // Retrieve icon data as SVG
-        const svgData = fs.readFileSync(path.posix.join(ASSETS_DIR_PATH, `${this.judgeId}.svg`))
+        const svgData = fs.readFileSync(path.join(ASSETS_DIR_PATH, `${this.judgeId}.svg`))
         this.iconData = svgToMiniDataUri(svgData.toString())
     }
 
