@@ -1,46 +1,55 @@
-import { DEFAULT_COLOR } from "../constants"
+import {ASSETS_DIR_PATH, DEFAULT_COLOR} from '../constants'
 import { badgen } from 'badgen'
+import path from 'node:path/win32'
+import * as fs from 'fs'
+import svgToMiniDataUri from 'mini-svg-data-uri'
 
 abstract class Judge {
     requestCount: number
     requestTimeout: NodeJS.Timeout
+    iconData: string
 
     /**
      * Constructs a Judge object.  Each Judge object instance is responsible for handling requests for SVGs for a single judge
      */
-    constructor() {
+    constructor(
+        /**
+         * Returns an associative array of rating bounds to their respective colours.  The key should be the lower bound for
+         * the rating range with the specified colour (i.e. if red is from 2400-2999, add "2400 => 'red'" into the map).
+         *
+         * The list should be in increasing order of bounds, and there should be at least one bound that's 0
+         */
+        private readonly ratingMap: [number, string][],
+
+        /**
+         * Name of the judge
+         */
+        readonly judgeName: string,
+
+        /**
+         * String used to identify the judge
+         */
+        readonly judgeId: string,
+
+        /**
+         * Max # of requests per period.  Used for rate limiting.  If it's -1, then no limit is applied.
+         * (i.e. If the limit was 10 requests per minute, the max requests would be 10)
+         */
+        protected readonly maxRequestsPerPeriod: number,
+
+        /**
+         * Length of a period, in ms (i.e. if the limit was 10 requests per minute, the period would be 60000)
+         */
+        protected readonly requestPeriod: number
+    ) {
         this.requestCount = 0
         this.requestTimeout = null
+
+        // Conversion site: https://www.convertsimple.com/convert-webp-to-svg/
+        // Retrieve icon data as SVG
+        const svgData = fs.readFileSync(path.posix.join(ASSETS_DIR_PATH, `${this.judgeId}.svg`))
+        this.iconData = svgToMiniDataUri(svgData.toString())
     }
-
-    /**
-     * Returns an associative array of rating bounds to their respective colours.  The key should be the lower bound for
-     * the rating range with the specified colour (i.e. if red is from 2400-2999, add "2400 => 'red'" into the map).
-     *
-     * The list should be in increasing order of bounds, and there should be at least one bound that's 0
-     */
-    protected abstract get ratingMap(): [number, string][]
-
-    /**
-     * Name of the judge
-     */
-    abstract get judgeName(): string
-
-    /**
-     * Url to the icon of the judge
-     */
-    protected abstract get judgeIconUrl(): string
-
-    /**
-     * Max # of requests per period.  Used for rate limiting.  If it's -1, then no limit is applied.
-     * (i.e. If the limit was 10 requests per minute, the max requests would be 10)
-     */
-    protected abstract get maxRequestsPerPeriod(): number
-
-    /**
-     * Length of a period, in ms (i.e. if the limit was 10 requests per minute, the period would be 60000)
-     */
-    protected abstract get requestPeriod(): number
 
     /**
      * Sends the request to get the rating for a handle.
@@ -90,7 +99,7 @@ abstract class Judge {
             label: this.judgeName,
             status: typeof (rating) === 'number' ? rating.toString() : rating,
             color: color,
-            icon: this.judgeIconUrl
+            icon: this.iconData
         })
     }
 

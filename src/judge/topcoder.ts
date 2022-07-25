@@ -21,31 +21,21 @@ class Topcoder extends Judge {
         })
     }
 
-    protected get judgeIconUrl(): string {
-        return 'https://www.topcoder.com/wp-content/uploads/2020/05/cropped-TC-Icon-32x32.png'
-    }
-
-    get judgeName(): string {
-        return 'Topcoder'
-    }
-
-    protected get maxRequestsPerPeriod(): number {
-        return 30
-    }
-
-    protected get ratingMap(): [number, string][] {
-        return [
-            [0, 'gray'],
-            [900, 'green'],
-            [1200, 'blue'],
-            [1500, 'yellow'],
-            [2200, 'red'],
-            [3000, '800000']
-        ]
-    }
-
-    protected get requestPeriod(): number {
-        return 10000
+    constructor() {
+        super(
+            [
+                [0, 'gray'],
+                [900, 'green'],
+                [1200, 'blue'],
+                [1500, 'yellow'],
+                [2200, 'red'],
+                [3000, '800000']
+            ],
+            'Topcoder',
+            'topcoder',
+            30,
+            10000
+        )
     }
 }
 

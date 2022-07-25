@@ -19,32 +19,22 @@ class DMOJ extends Judge {
         })
     }
 
-    protected get judgeIconUrl(): string {
-        return 'https://dmoj.ca/icon.svg'
-    }
-
-    get judgeName(): string {
-        return 'DMOJ'
-    }
-
-    protected get maxRequestsPerPeriod(): number {
-        return 60
-    }
-
-    protected get ratingMap(): [number, string][] {
-        return [
-            [0, 'gray'],
-            [1000, 'green'],
-            [1300, 'blue'],
-            [1600, 'purple'],
-            [1900, 'yellow'],
-            [2400, 'red'],
-            [3000, '800000']
-        ]
-    }
-
-    protected get requestPeriod(): number {
-        return 60000
+    constructor() {
+        super(
+            [
+                [0, 'gray'],
+                [1000, 'green'],
+                [1300, 'blue'],
+                [1600, 'purple'],
+                [1900, 'yellow'],
+                [2400, 'red'],
+                [3000, '800000']
+            ],
+            'DMOJ',
+            'dmoj',
+            60,
+            60000
+        )
     }
 }
 

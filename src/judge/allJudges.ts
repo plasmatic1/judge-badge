@@ -6,25 +6,20 @@ import Topcoder from "./topcoder"
 import { badgen } from 'badgen'
 
 type JudgeDesc = {
-    id: string
     judge: Judge
 }
 
 const JUDGES: JudgeDesc[] = [
     {
-        id: 'dmoj',
         judge: new DMOJ()
     },
     {
-        id: 'codeforces',
         judge: new Codeforces()
     },
     {
-        id: 'atcoder',
         judge: new Atcoder()
     },
     {
-        id: 'topcoder',
         judge: new Topcoder()
     }
 ]

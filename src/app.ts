@@ -1,30 +1,36 @@
 import express from 'express'
-import { HOST, PORT } from './constants'
-import { JUDGES, generateBadgeSample } from "./judge/allJudges"
+import {ASSETS_DIR_PATH, BASE_URL, HOST, PORT, PROD, STATIC_URL_PATH} from './constants'
+import {JUDGES, generateBadgeSample} from './judge/allJudges'
+import urlJoin from 'proper-url-join'
+
 const app = express()
 
-// Logging middleware
+// logging middleware
 app.use((req, res, next) => {
     console.log(`[${new Date(Date.now()).toISOString()}] GET ${req.url}`)
     next()
 });
 
-// Endpoints
+// endpoints
 app.get('/', (req, res) => {
     res.send(generateBadgeSample())
 })
+console.log(`PROD=${PROD}`)
 console.log('Registered sample page')
 
-for (const {id, judge} of JUDGES) {
-    app.get(`/${id}/:handle`, async (req, res) => {
+for (const {judge} of JUDGES) {
+    app.get(`/${judge.judgeId}/:handle`, async (req, res) => {
         const handle = req.params.handle
         res.setHeader('Content-Type', 'image/svg+xml')
         res.send(await judge.generateBadgeWithHandle(handle))
     })
-    console.log(`Registered page for judge ${judge.judgeName} (path=/${id}/<rating>)`)
+    console.log(`Registered page for judge ${judge.judgeName} (example: ${urlJoin(BASE_URL, judge.judgeId, 'plasmatic')})`)
 }
 
-// Run server
+// static hosting of asset files (for fun!!!)
+app.use(STATIC_URL_PATH, express.static(ASSETS_DIR_PATH))
+
+// run server
 app.listen(PORT, HOST, () => {
     console.log(`Started server at ${HOST}:${PORT}`)
     console.log()
