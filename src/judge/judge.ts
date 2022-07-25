@@ -47,7 +47,7 @@ abstract class Judge {
 
         // Conversion site: https://www.convertsimple.com/convert-webp-to-svg/
         // Retrieve icon data as SVG
-        const svgData = fs.readFileSync(path.join(ASSETS_DIR_PATH, `${this.judgeId}.svg`))
+        const svgData = fs.readFileSync(path.posix.join(ASSETS_DIR_PATH, `${this.judgeId}.svg`))
         this.iconData = svgToMiniDataUri(svgData.toString())
     }
 

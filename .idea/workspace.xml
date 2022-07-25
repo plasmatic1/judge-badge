@@ -3,20 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="befd1b24-8ee2-4d44-a9ba-019a4e48767f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/constants.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/judge/allJudges.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/judge/allJudges.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/judge/atcoder.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/judge/atcoder.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/judge/codeforces.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/judge/codeforces.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/judge/dmoj.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/judge/dmoj.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/judge/judge.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/judge/judge.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/judge/topcoder.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/judge/topcoder.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/atcoder.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/atcoder.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/codeforces.webp" beforeDir="false" afterPath="$PROJECT_DIR$/assets/codeforces.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/dmoj.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/dmoj.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/topcoder.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/topcoder.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,7 +122,7 @@
       <workItem from="1657248102757" duration="3924000" />
       <workItem from="1658168790912" duration="185000" />
       <workItem from="1658331479937" duration="5652000" />
-      <workItem from="1658641611374" duration="7693000" />
+      <workItem from="1658641611374" duration="8757000" />
     </task>
     <servers />
   </component>
