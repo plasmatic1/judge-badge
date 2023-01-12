@@ -28,6 +28,13 @@ function generateBadgeSample(): string {
     return `<!DOCTYPE html>
             <html lang="html">
             <body>
+                <h1>Judge-Badge</h1>
+                
+                <p>
+                    A system for rendering dynamic SVG pill badges for online judge profiles.  Information on usage and source code can be found on
+                        <a href="https://github.com/plasmatic1/judge-badge">GitHub</a>.
+                </p>
+                
                 <h1>Badge Samples</h1>
                 ${badgen({
                     subject: 'ludicrously long',
