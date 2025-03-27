@@ -5,10 +5,9 @@ class Topcoder extends Judge {
     protected async getRatingHelper(handle: string): Promise<number> {
         return new Promise<number>((resolve, reject) => {
             /**
-             * The Topcoder API documentation is extremely outdated, and does not provide any information on the current API version.
-             * I had to go into the network tab of https://profiles.topcoder.com/HANDLE/ to find the correct endpoint.
-             * 
-             * API v2 (the latest documented one) appears to be deprecated; all requests result in a 403 Forbidden.
+             * The Topcoder API documentation is extremely outdated, and only documents API v2, which appears to be deprecated; all
+             * requests result in a 403 forbidden. For the current API version, I had to go into the network tab of
+             * https://profiles.topcoder.com/HANDLE/ to find the correct endpoint.
              *
              * So uhh... thanks I guess?
              */
