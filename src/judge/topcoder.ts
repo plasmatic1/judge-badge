@@ -7,6 +7,10 @@ class Topcoder extends Judge {
             /**
              * The Topcoder API documentation is extremely outdated, and does not provide any information on the current API version.
              * I had to go into the network tab of https://profiles.topcoder.com/HANDLE/ to find the correct endpoint.
+             * 
+             * API v2 (the latest documented one) appears to be deprecated; all requests result in a 403 Forbidden.
+             *
+             * So uhh... thanks I guess?
              */
             fetch(`https://api.topcoder.com/v5/members/${handle}/stats`)
                 .then(obj => obj.json())
