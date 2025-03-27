@@ -2,7 +2,7 @@
 
 Online judge rating SVG badges :D
 
-You can see them in action on my [profile page](https://github.com/plasmatic1), or check out a sample [here](https://mosesxu.ca/judge-badge/)!
+You can see them in action on my [profile page](https://github.com/plasmatic1), or check out the badge samples [here](https://mosesxu.ca/judge-badge/)!
 
 ## Usage
 
