@@ -36,10 +36,14 @@ function generateBadgeSample(): string {
                 </p>
                 
                 <h1>Badge Samples</h1>
+
+                <p>Below is a sample badge with some static text:</p>
                 ${badgen({
                     subject: 'ludicrously long',
                     status: 'placeholder badge'
                 })}
+
+                <p>Below are sample badges for each supported judge. Every supported rating level is shown:</p>
                 ${JUDGES.map(({judge}) =>
                     `<h2>${judge.judgeName}</h2>${judge.generateBadgeSample()}`       
                 ).join('')}

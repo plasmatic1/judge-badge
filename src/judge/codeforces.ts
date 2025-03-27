@@ -38,7 +38,8 @@ class Codeforces extends Judge {
                 [2300, 'ff8c00'],
                 [2400, 'red'],
                 [2600, 'ca0000'],
-                [3000, '800000']
+                [3000, '800000'],
+                [4000, '400000']
             ],
             'Codeforces',
             'codeforces',
