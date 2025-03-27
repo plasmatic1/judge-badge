@@ -4,17 +4,23 @@ import fetch from 'node-fetch'
 class Topcoder extends Judge {
     protected async getRatingHelper(handle: string): Promise<number> {
         return new Promise<number>((resolve, reject) => {
-            fetch(`https://api.topcoder.com/v2/users/${handle}`)
+            /**
+             * The Topcoder API documentation is extremely outdated, and does not provide any information on the current API version.
+             * I had to go into the network tab of https://profiles.topcoder.com/HANDLE/ to find the correct endpoint.
+             */
+            fetch(`https://api.topcoder.com/v5/members/${handle}/stats`)
                 .then(obj => obj.json())
                 .then(obj => {
                     if (obj?.error)
                         reject(obj.error.name)
                     else {
-                        for (const {name, rating} of obj.ratingSummary) {
-                            if (name === 'Algorithm')
-                                resolve(rating)
-                        }
-                        reject('Unrated')
+                        const rating = obj[0]?.DATA_SCIENCE?.SRM?.rank.rating
+                        if (rating === null || rating === undefined)
+                            reject('Not Found')
+                        else if (rating === 0)
+                            reject('Unrated')
+                        else
+                            resolve(rating)
                     }
                 })
                 .catch(err => reject(err))
