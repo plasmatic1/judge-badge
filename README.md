@@ -2,14 +2,14 @@
 
 Online judge rating SVG badges :D
 
-You can see them in action on my [profile page](https://github.com/plasmatic1), or check out the badge samples [here](https://mosesxu.ca/judge-badge/)!
+You can see them in action on my [profile page](https://github.com/plasmatic1), or check out the badge samples [here](https://judge-badge.mosesxu.ca/)!
 
 ## Usage
 
-Simply create an image with an `src` tag of `https://mosesxu.ca/judge-badge/<judge-id>/<handle>`! For example, if I were to create a DMOJ badge in Markdown, I would do:
+Simply create an image with an `src` tag of `https://judge-badge.mosesxu.ca/<judge-id>/<handle>`! For example, if I were to create a DMOJ badge in Markdown, I would do:
 
 ```
-[![DMOJ Badge](http://mosesxu.ca/judge-badge/dmoj/plasmatic)](https://www.dmoj.ca/user/Plasmatic)
+[![DMOJ Badge](http://judge-badge.mosesxu.ca/dmoj/plasmatic)](https://www.dmoj.ca/user/Plasmatic)
 ```
 
 Currently available judges and their IDs are:
